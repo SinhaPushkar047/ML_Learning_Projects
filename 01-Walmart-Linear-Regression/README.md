@@ -80,8 +80,8 @@ The model was evaluated using:
 | ---------- | ----------: |
 | Test R²    |   **0.921** |
 | Mean CV R² |   **0.918** |
-| MAE        |  **91,044** |
-| RMSE       | **159,684** |
+| MAE        |  **91,010** |
+| RMSE       | **159,506** |
 
 The similarity between the test R² and mean cross-validation R² indicates that the model performed consistently across different training/validation splits.
 
@@ -115,6 +115,7 @@ This project helped me practice:
 * Feature scaling
 * One-hot encoding
 * ColumnTransformer
+* PowerTransformer
 * Pipelines
 * Linear Regression
 * Cross-validation
