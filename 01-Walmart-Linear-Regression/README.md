@@ -51,11 +51,11 @@ No significant invalid outliers were identified that required removal.
 
 The following preprocessing techniques were practiced:
 
-* Train-test split
-* Standardization of numerical features
-* One-hot encoding of `Store`
+* `Train-test split`
+* `Standardization of numerical features`
+* `One-hot encoding of Store`
 * `ColumnTransformer`
-* Pipeline
+* `Pipeline`
 
 The raw `Date` column was removed for this first Linear Regression model rather than directly passing timestamps to the model.
 
@@ -78,10 +78,10 @@ The model was evaluated using:
 
 | Metric     |      Result |
 | ---------- | ----------: |
-| Test R²    |   **0.921** |
-| Mean CV R² |   **0.918** |
-| MAE        |  **91,010** |
-| RMSE       | **159,506** |
+| `Test R²`    |   **0.921** |
+| `Mean CV R²` |   **0.918** |
+| `MAE`        |  **91,010** |
+| `RMSE`       | **159,506** |
 
 The similarity between the test R² and mean cross-validation R² indicates that the model performed consistently across different training/validation splits.
 
