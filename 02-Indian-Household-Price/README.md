@@ -101,15 +101,22 @@ The main goal was to understand when transformations are useful rather than appl
 
 ---
 
-## 🤖 Model
+## 🤖 Models
 
-The primary model used in this project is:
+Two linear regression approaches were experimented with:
 
-**Linear Regression**
+### 1. Linear Regression
 
-The data preprocessing steps were organized using transformers/pipelines to make the workflow consistent between training and testing data.
+`LinearRegression()` from Scikit-learn was used as the baseline model.
 
----
+It uses a least-squares optimization approach.
+
+### 2. Linear Regression using Stochastic Gradient Descent
+
+`SGDRegressor` was used with:
+
+```python```
+loss='squared_error'
 
 ## 📈 Model Evaluation
 
@@ -171,6 +178,7 @@ Through this project, I learned that:
 - Pandas
 - Matplotlib
 - Seaborn
+- SGDRegressor
 - Scikit-learn
 - Google Colab / Jupyter Notebook
 
