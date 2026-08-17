@@ -16,6 +16,7 @@ The main purpose of this project is to practice the machine learning concepts I 
 - Pipelines and transformers
 - Linear Regression
 - Polynomial Regression
+- Ridge Regression
 - SGD Regression
 - Cross-validation
 - Model evaluation
@@ -119,9 +120,13 @@ It uses a least-squares optimization approach.
 ```python```
 loss='squared_error'
 
-### 2. Polynomial Regression
+### 2. Polynomial Linear Regression
 
-`PolynomialRegression()` from Scikit-learn was used which improve the model accuracy.
+`PolynomialLinearRegression()` from Scikit-learn was used which improve the model accuracy.
+
+### 2. Polynomial RIdge Regression
+
+`PolynomialRidgeRegression()` from Scikit-learn was used which improve the model accuracy and it perform best when compared with other two models.
 
 ## 📈 Model Evaluation
 
@@ -149,10 +154,10 @@ Cross-validation was used to check whether the model's performance was consisten
 
 | Metric | Result |
 |---|---:|
-| Test R² | **83.87%** |
-| Mean CV R² | **81.32%** |
-| MAE | **95,934** |
-| RMSE | **150,723** |
+| Test R² | **84.00%** |
+| Mean CV R² | **81.60%** |
+| MAE | **95,672** |
+| RMSE | **150,126** |
 
 The final Polynomial Regression model achieved an R² score of approximately **0.838 on the test set**.
 
@@ -184,7 +189,8 @@ Through this project, I learned that:
 - Matplotlib
 - Seaborn
 - SGDRegressor
-- Polynomial Regression
+- Polynomial Linear Regression
+- Polynomial Ridge Regression
 - Scikit-learn
 - Google Colab / Jupyter Notebook
 
