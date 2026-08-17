@@ -150,7 +150,7 @@ Cross-validation was used to check whether the model's performance was consisten
 
 ---
 
-## 🏆 Final Linear Regression Results
+## 🏆 Final Polynomial Ridge Regression Results
 
 | Metric | Result |
 |---|---:|
