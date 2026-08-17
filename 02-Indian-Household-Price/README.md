@@ -15,6 +15,8 @@ The main purpose of this project is to practice the machine learning concepts I 
 - Outlier analysis
 - Pipelines and transformers
 - Linear Regression
+- Polynomial Regression
+- SGD Regression
 - Cross-validation
 - Model evaluation
 
@@ -85,9 +87,8 @@ A particularly unusual observation in `living area` was investigated, but removi
 Different scaling techniques were experimented with, including:
 
 - `StandardScaler`
-- `RobustScaler`
 
-Scaling did not produce a meaningful improvement in the Linear Regression model.
+Scaling did produce a meaningful improvement in the Linear Regression model.
 
 This demonstrated that preprocessing techniques should be evaluated rather than applied automatically.
 
@@ -118,6 +119,10 @@ It uses a least-squares optimization approach.
 ```python```
 loss='squared_error'
 
+### 2. Polynomial Regression
+
+`PolynomialRegression()` from Scikit-learn was used which improve the model accuracy.
+
 ## 📈 Model Evaluation
 
 The model was evaluated using:
@@ -144,14 +149,14 @@ Cross-validation was used to check whether the model's performance was consisten
 
 | Metric | Result |
 |---|---:|
-| Test R² | **75.11%** |
-| Mean CV R² | **72.19%** |
-| MAE | **117,893** |
-| RMSE | **187,267** |
+| Test R² | **83.87%** |
+| Mean CV R² | **81.32%** |
+| MAE | **95,934** |
+| RMSE | **150,723** |
 
-The final Linear Regression model achieved an R² score of approximately **0.751 on the test set**.
+The final Polynomial Regression model achieved an R² score of approximately **0.838 on the test set**.
 
-The mean 5-fold cross-validation R² was approximately **0.722**, indicating that the model explains around 72% of the variation in house prices on average across the validation folds.
+The mean 5-fold cross-validation R² was approximately **0.813**, indicating that the model explains around 81% of the variation in house prices on average across the validation folds.
 
 ---
 
@@ -179,6 +184,7 @@ Through this project, I learned that:
 - Matplotlib
 - Seaborn
 - SGDRegressor
+- Polynomial Regression
 - Scikit-learn
 - Google Colab / Jupyter Notebook
 
