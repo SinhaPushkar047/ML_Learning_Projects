@@ -26,14 +26,6 @@ The purpose of this repository is to apply the concepts I learn through hands-on
 * Hyperparameter Tuning
 * And other Machine Learning concepts
 
-## 📂 Projects
-
-| #  | Project                                                            | Main Concepts                                                                                    |
-| -- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| 01 | [Walmart Weekly Sales Prediction](./01-Walmart-Linear-Regression/) | EDA, Scaling, One-Hot Encoding, ColumnTransformer, Pipeline, Linear Regression, Cross-Validation |
-| 02 | [Indian Household Price](./02-Indian-Household-Price/)             | EDA, Feature Engineering, Outlier Analysis, Power Transformation, Scaling, ColumnTransformer, Pipeline, Linear Regression, Cross-Validation, R², MAE, RMSE|
-| 03 | Coming Soon                                                        | —                                                                                                |
-
 ## 🛠️ Tools & Libraries
 
 * Python
