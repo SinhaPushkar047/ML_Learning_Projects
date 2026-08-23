@@ -733,26 +733,6 @@ CIFAR-10-ML/
 
 ---
 
-# 🚀 How to Run
-
-### 1. Clone the repository
-
-```bash
-git clone <your-repository-url>
-```
-
-### 2. Navigate into the project
-
-```bash
-cd CIFAR-10-ML
-```
-
-### 3. Install dependencies
-
-```bash
-pip install numpy pandas matplotlib seaborn scikit-learn tensorflow
-```
-
 ### 4. Open the notebook
 
 ```bash
