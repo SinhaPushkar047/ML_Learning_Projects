@@ -30,6 +30,17 @@ The primary objectives of this project are:
 7. Identify the best-performing model.
 
 ---
+## 📥 Dataset Download
+
+The CIFAR-10 dataset can be downloaded directly using TensorFlow/Keras.
+
+```python
+from tensorflow.keras.datasets import cifar10
+
+# Download CIFAR-10 dataset
+(X_train, y_train), (X_test, y_test) = cifar10.load_data()
+```
+---
 
 # 📊 Dataset
 
@@ -278,6 +289,14 @@ Pipeline([
 ```text
 Accuracy: 40%
 ```
+The classification report gives approximately:
+
+```text
+Accuracy       0.40
+Macro Average  0.40
+Weighted Avg   0.40
+```
+
 
 The classification report shows an overall accuracy of approximately **0.40**.
 
@@ -518,6 +537,38 @@ RBF SVM (C=10)
 
 **57%**
 
+## ⏱️ Training Time vs Accuracy
+
+Although the SVM models significantly outperform Logistic Regression in terms of accuracy, they require substantially more computational time to train.
+
+The SVM models took approximately **1 hour** to train on the CIFAR-10 training dataset, whereas Logistic Regression completed in 7 min.
+
+This highlights an important trade-off:
+
+| Model | Accuracy | Training Time | Trade-off |
+|---|---:|---:|---|
+| StandardScaler + PCA + Logistic Regression | 40% | ~7 min | Faster, but lower accuracy |
+| MinMaxScaler + PCA + Logistic Regression | 40% | ~7 min | Faster, but lower accuracy |
+| MinMaxScaler + PCA + SVM | 57% | ~1 hour | Higher accuracy, slower training |
+| StandardScaler + PCA + SVM | 57% | ~1 hour | Higher accuracy, slower training |
+
+### Key Observation
+
+The SVM models provide a significant improvement in classification performance:
+
+**40% → 57% accuracy**
+
+However, this improvement comes at the cost of considerably longer training time.
+
+Therefore, the choice of model depends on the application:
+
+- **If accuracy is the priority:** SVM is the better choice.
+- **If training speed and computational efficiency are the priority:** Logistic Regression may be preferable.
+- **For this project:** SVM is selected as the **best-performing model based on accuracy**, despite its approximately 1-hour training time.
+
+> **Note:** Training time can vary depending on hardware, CPU, RAM, Scikit-learn version, and system load. The ~1 hour figure represents the approximate training time observed during this experiment.
+
+
 ### Why SVM?
 
 The biggest improvement comes from replacing Logistic Regression with a nonlinear SVM.
@@ -709,26 +760,6 @@ jupyter notebook CIFAR_10.ipynb
 ```
 
 Alternatively, the notebook can be opened using Google Colab.
-
----
-
-# 📌 Limitations
-
-Although achieving 57% accuracy using classical Machine Learning is a reasonable result for this experiment, CIFAR-10 is fundamentally an image classification problem.
-
-The current approach treats each image primarily as a vector of pixel values after flattening:
-
-```text
-32 × 32 × 3
-        ↓
-3072-dimensional vector
-```
-
-This removes much of the explicit spatial structure of the image.
-
-For example, neighboring pixels and local patterns are not represented in the same structured way that they are in convolution-based models.
-
-Therefore, classical ML models are expected to have limitations on this dataset compared with specialized image models.
 
 ---
 
