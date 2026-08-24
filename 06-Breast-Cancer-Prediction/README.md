@@ -379,31 +379,6 @@ A suitable project structure is:
 
 ---
 
-## How to Run
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/SinhaPushkar047/ML_Learning_Projects.git
-cd ML_Learning_Projects/06-Breast-Cancer-Prediction
-```
-
-### 2. Install dependencies
-
-```bash
-pip install numpy pandas matplotlib scikit-learn
-```
-
-### 3. Open the notebook
-
-```bash
-jupyter notebook
-```
-
-Then open the project notebook and run the cells from top to bottom.
-
----
-
 ## Key Takeaways
 
 This project demonstrates several important classical machine-learning concepts together:
